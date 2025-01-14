@@ -3,7 +3,7 @@ import useHabitStore from "../store/store";
 import { CheckCircleOutline, DeleteOutline } from "@mui/icons-material";
 
 const HabitList = () => {
-  const { habits, removeHabit } = useHabitStore();
+  const { habits, removeHabit, toggleHabit } = useHabitStore();
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -27,6 +27,7 @@ const HabitList = () => {
                     habit.completedDates.includes(today) ? "success" : "primary"
                   }
                   startIcon={<CheckCircleOutline />}
+                  onClick={() => toggleHabit(habit.id, today)}
                 >
                   {habit.completedDates.includes(today)
                     ? "Complete"
