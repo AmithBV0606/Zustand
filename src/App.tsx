@@ -5,7 +5,7 @@ import HabitList from "./components/habit-list";
 
 const App = () => {
   const store = useHabitStore();
-  console.log(store);
+  // console.log(store);
 
   return (
     <Container>
