@@ -4,9 +4,11 @@ import AddHabitForm from "./components/add-habit-form";
 import HabitList from "./components/habit-list";
 
 const App = () => {
-  const store = useHabitStore();
+  // const store = useHabitStore();
   // console.log(store);
 
+  const { fetchHabits } = useHabitStore();
+  
   return (
     <Container>
       <Box>

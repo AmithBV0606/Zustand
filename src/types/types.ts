@@ -11,4 +11,7 @@ export interface HabitState {
   addHabit: (name: string, frequency: "daily" | "weekly") => void;
   removeHabit: (id: string) => void;
   toggleHabit: (id: string, date: string) => void;
+  fetchHabits: () => Promise<void>;
+  isLoading: boolean;
+  error: string | null;
 }
