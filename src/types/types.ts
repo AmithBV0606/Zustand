@@ -9,4 +9,5 @@ export interface Habit {
 export interface HabitState {
   habits: Habit[];
   addHabit: (name: string, frequency: "daily" | "weekly") => void;
+  removeHabit: (id: string) => void;
 }
