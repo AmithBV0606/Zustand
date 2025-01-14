@@ -1,7 +1,10 @@
+import useHabitStore from "./store/store";
+
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const store = useHabitStore();
+  console.log(store);
+
+  return <div>App</div>;
+};
 
 export default App;
